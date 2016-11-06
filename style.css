@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+  /*background: #EAEAEA;*/
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  box-sizing: border-box;
+}
+
+.prepie {
+  width: 220px;
+  height: 220px;
+  margin: 20px auto 0 auto;
+  border: 2px solid #D9D9D9;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px #D8D8D8;
+}
+
+.pie {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8F8;
+  border: 8px solid #FFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.pie:before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: -1px 0 0 -1px;
+  border: 1px solid #DADADA;
+  border-radius: inherit;
+}
+
+.clip1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0); /*02 00 20 01 00*/
+}
+
+.slice1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0); /*01 00 20 00*/
+  border: 0 0 0 1px solid #555;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FBCB43/*#F3D346 - Google used this one*/;
+  /*border-color:#f7e5e1;*/
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-box-shadow: inset 0 0 10px #FABD11;
+  -moz-box-shadow: inset 0 0 10px #FABD11;
+  box-shadow: inset 0 0 10px #FABD11;
+}
+
+.clip2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0); /*01 00 20 00*/
+}
+
+.slice2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0); /*02 00 20 01 00*/
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FBCB43/*#F3D346 - Google used this one*/;
+  /*border-color: #f7e5e1;*/
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-box-shadow: inset 0 0 10px #FABD11;
+  -moz-box-shadow: inset 0 0 10px #FABD11;
+  box-shadow: inset 0 0 10px #FABD11;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #F8F8F8;
+  border-radius: 50%;
+}
+
+.status {
+  position: absolute;
+  top: 50%;
+  height: 30px;
+  width: 100%;
+  margin-top: -30px;
+  text-align: center;
+  font-family: Arial;
+  line-height: 1em;
+  font-size: 60px;
+}
+
+.out {
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.left {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding-right: 16px;
+  border-right: 1px solid #E5E5E5;
+  text-align: right;
+}
+
+.left > .current {
+  color: #FBCB43;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.right {
+  display: inline-block;
+  width: 50%;
+  padding-left: 15px;
+  text-align: left;
+  float: right;
+}
+
+.right > .max {
+  color: #555;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.current,
+.percent,
+.max {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: auto;
+}
